@@ -1,27 +1,46 @@
+:root{
+    --radii:10px;
+    --background:rgba(8, 178, 244, 0.2);
+    --main-background: #282c34;
+}
+
+body{
+    width: 900px;
+    margin: 50px auto;
+    display: flex;
+    background-color: var(--main-background);
+}
 .counter{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 .counter__info{
+    width: 60px;
+    height: 65px;
     font-size: 40px;
-    color:  rgba(8, 178, 244, 0.2)
-
+    color:  var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radii);
 }
 .button{
-    background: rgba(8, 178, 244, 0.2);
+    background: var(--background);
     border: none;
     font-size: 40px;
     color: #6a6868;
-    border-radius: 10px;
+    border-radius: var(--radii);
     padding: 10px 20px;
     display: flex;
     align-items: center;
     cursor: progress;
 
 }
-.button__icon :not(:last-child){
+.button__icon{
     height: 25px;
     width: 25px;
-    margin-right: 2px;
+}
+.button__icon:not(:last-child){
+    margin-right: 6px
 }
